@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-Ws-BcV">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5sz-At-j2Z"/>
+                                    <constraint firstAttribute="width" secondItem="7dm-Ws-BcV" secondAttribute="height" multiplier="1:1" id="7kY-mD-ugS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="9o4-nB-Jpn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="w5r-fL-mOw"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9o4-nB-Jpn"/>
+                                        <exclude reference="w5r-fL-mOw"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ucg-i4-SLs" appends="YES" id="wTv-rd-flQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="OXM-vf-jPi" appends="YES" id="BwU-pi-DWS"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7dm-Ws-BcV" secondAttribute="centerY" id="HfF-UA-Hum"/>
+                            <constraint firstAttribute="trailing" secondItem="7dm-Ws-BcV" secondAttribute="trailing" constant="20" id="IcA-6x-DxS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7dm-Ws-BcV" secondAttribute="bottom" constant="20" id="YTH-gy-qiK"/>
+                            <constraint firstItem="7dm-Ws-BcV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="coM-DQ-x9b"/>
+                            <constraint firstItem="7dm-Ws-BcV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="kGy-8U-Elq"/>
+                            <constraint firstAttribute="centerX" secondItem="7dm-Ws-BcV" secondAttribute="centerX" id="kSU-gA-DMY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IcA-6x-DxS"/>
+                                <exclude reference="coM-DQ-x9b"/>
+                                <exclude reference="kGy-8U-Elq"/>
+                                <exclude reference="YTH-gy-qiK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="testView" destination="7dm-Ws-BcV" id="DtG-4A-lFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="Ucg-i4-SLs">
+                    <connections>
+                        <action selector="pinchGestureRecognized:" destination="BYZ-38-t0r" id="tmI-4Z-J36"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="OXM-vf-jPi">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="BYZ-38-t0r" id="FBz-yI-lsq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
